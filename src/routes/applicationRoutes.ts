@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import prisma from "../db";
+import prisma from "../db.js";
 import protect from "../middleware/protect";
 import validate from "../middleware/validate";
 import {
