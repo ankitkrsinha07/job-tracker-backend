@@ -2,9 +2,9 @@ import express, { Request, Response } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import prisma from "../db.js";
-import protect from "../middleware/protect";
-import validate from "../middleware/validate";
-import { registerRules, loginRules } from "../validators/authValidator";
+import protect from "../middleware/protect.js";
+import validate from "../middleware/validate.js";
+import { registerRules, loginRules } from "../validators/authValidator.js";
 
 const router = express.Router();
 

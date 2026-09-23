@@ -1,11 +1,11 @@
 import express, { Request, Response } from "express";
 import prisma from "../db.js";
-import protect from "../middleware/protect";
-import validate from "../middleware/validate";
+import protect from "../middleware/protect.js";
+import validate from "../middleware/validate.js";
 import {
   createApplicationRules,
   updateApplicationRules,
-} from "../validators/applicationValidator";
+} from "../validators/applicationValidator.js";
 
 const router = express.Router();
 
