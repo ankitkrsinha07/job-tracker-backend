@@ -53,5 +53,8 @@ export const updateApplicationRules = [
     .isIn(["applied", "interview", "rejected", "offer"])
     .withMessage("Status must be applied, interview, rejected, or offer"),
 
-  body("jobUrl").optional().isURL().withMessage("Job URL must be a valid URL"),
+  body('jobUrl')
+  .optional({ checkFalsy: true })
+  .isURL()
+  .withMessage('Job URL must be a valid URL'),
 ];
