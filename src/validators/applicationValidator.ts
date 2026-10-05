@@ -20,7 +20,10 @@ export const createApplicationRules = [
     .isIn(["applied", "interview", "rejected", "offer"])
     .withMessage("Status must be applied, interview, rejected, or offer"),
 
-  body("jobUrl").optional().isURL().withMessage("Job URL must be a valid URL"),
+  body("jobUrl")
+    .optional({ checkFalsy: true })
+    .isURL()
+    .withMessage("Please enter a valid URL"),
 
   body("appliedDate")
     .optional()
